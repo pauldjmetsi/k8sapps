@@ -23,7 +23,7 @@ spec:
         - name: mariadb
           image: bitnami/mariadb:10.3
           ports:
-            - name: db-port
+            - name: mariadb
               containerPort: 3306
           env:
             - name: MARIADB_USER
@@ -49,7 +49,7 @@ spec:
     func: database
   ports:
     - port: 3306
-      targetPort: db-port
+      targetPort: 3306
   type: ClusterIP
 ---
 apiVersion: apps/v1
